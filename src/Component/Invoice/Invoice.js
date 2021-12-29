@@ -1,16 +1,18 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import img from "./../../img/8(2).png";
 import "./Invoice.css";
 
 const Invoice = () => {
   return (
-    <div>
-      <h1>Thank you,Mushfiq Rahman for your </h1>
+    <div className="background">
+      
+
+      <Container className="container">
+      <h1>Thank you, <strong>Mushfiq Rahman</strong>  for your </h1>
       <h1>purchase</h1>
       <img style={{height:"300px"}} src={img} alt="img" />
-
-      <Container>
         <Row>
           <Col lg={6} md={6} sm={6} className="order-details-start">
             <h1>Order Details</h1>
@@ -23,7 +25,7 @@ const Invoice = () => {
               />
 
               <div>
-                <p>Software Quality Assurence(SQA)</p>
+                <p>Software Quality Assurence(SQA) </p>
               </div>
             </div>
           </Col>
@@ -74,14 +76,21 @@ const Invoice = () => {
         <Col lg={6} md={6} sm={6} className="order-details-start">
             <h4> Total</h4>
             <h4> Paid with</h4>
-            <button>Back</button>
+            <button className="back-button"> <i className="fas fa-arrow-left"></i> Back</button>
            
           </Col>
           <Col lg={6} md={6} sm={6} className="order-details-end">
           
               <h4>$6990</h4>
-              <h4>Master Card</h4>
-              <button>Download</button>
+             
+            <div className="master-card"> 
+             <h4>Master Card </h4>
+             <img
+                className="card"
+                src="https://flyclipart.com/thumb2/mastercard-icons-29734.png"
+                alt="img"
+              /> </div>
+              <button className="download-button"> Download  <i className="fas fa-download"></i>   </button>
               
          
           </Col>
